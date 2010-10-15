@@ -1,4 +1,4 @@
-class AnonymousUserGenerator < Rails::Generators::NamedBase
+class AnonymousUserGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
   include Rails::Generators::Migration
   
