@@ -1,0 +1,5 @@
+Description:
+    Generates an AnonymousUser model and migration.
+
+Example:
+    rails generate anonymous_user
