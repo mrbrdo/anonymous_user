@@ -2,7 +2,7 @@ AnonymousUser
 =============
 
 This generator will create an AnonymousUser model. You can call AnonymousUser::get(request.remote_ip, cookies)
-in a controller (or view) to get an AnonymousUser instance for the current user. The instance is based on IP of the remote
+in a controller to get an AnonymousUser instance for the current user. The instance is based on IP of the remote
 client OR cookie. If a user hasn't got a cookie but his IP is already assigned to an AnonymousUser, the get
 method will return that user. If a user has a cookie but the IP is not yet assigned, the get method will return
 the user with the cookie value. A new user is automatically created when there is no existing user with this IP
@@ -12,8 +12,20 @@ or cookie value.
 Example
 =======
 
+Install plugin with
+
+  rails plugin install git://github.com/mrbrdo/anonymous_user.git
+  
+Use the generator
+
+  rails g anonymous_user
+  
+Migrate the database
+
+  rake db:migrate
+
 This plugin was created to allow anonymous rating with Ajaxful Rating plugin. For example you could add this to
-your application controller:
+your application controller
 
   helper_method :current_user
   
